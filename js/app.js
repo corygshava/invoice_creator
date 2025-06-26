@@ -5,6 +5,7 @@ let analyzed = [];
 window.onload = () => {
 	let addbtn = document.querySelector('#addbtn');
 	let invTitle = document.querySelector('#invTitle');
+	let navlinks = document.querySelectorAll('.navlinks');
 
 	if(addbtn != undefined){
 		addbtn.addEventListener("click", () => {
@@ -42,6 +43,33 @@ window.onload = () => {
 		invTitle.addEventListener('input',(e) => {
 			invoice_title = e.target.value;
 			titleShow.innerHTML = invoice_title;
+		});
+	}
+
+	// handle startups
+	let copyitems = document.querySelectorAll('[data-copyme]');
+
+	copyitems.forEach(cop => {
+		let tocopy = document.querySelector(cop.dataset.copyme);
+
+		if(tocopy != undefined){
+			cop.innerHTML = tocopy.innerHTML;
+		}
+	})
+
+	// setup navbar
+	if(navlinks.length > 0){
+		navlinks.forEach(curnav => {
+			let lnks = curnav.querySelectorAll('a');
+
+			lnks.forEach(el => {
+				let mine = getcurfile(el.href);
+				let current = getcurfile(window.location.href);
+
+				if(mine.toLowerCase() == current.toLowerCase()){
+					el.classList.add("current");
+				}
+			})
 		});
 	}
 }
@@ -179,4 +207,11 @@ function uploadData() {
 	} else {
 		alert("invalid passkey, try again");
 	}
+}
+
+function getcurfile(href) {
+	let pieces = href.split("/");
+	let curfile = pieces[pieces.length - 1].split("?")[0];
+
+	return curfile;
 }

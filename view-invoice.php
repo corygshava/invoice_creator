@@ -67,6 +67,9 @@
     <link rel="stylesheet" type="text/css" href="css/w3.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/s-autoform.css">
+
+	<script src="js/app.js"></script>
+	<script src="js/logbox.js"></script>
 </head>
 <body>
 	<?php

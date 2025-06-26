@@ -16,7 +16,7 @@
 		include 'elements/navbar.php';
 	?>
 
-	<div class="content">
+	<div class="content t0">
 		<section class="whitebg" id="inputarea">
 			<div class="card">
 				<h2 class="themetxt">Invoice Title:</h2>
