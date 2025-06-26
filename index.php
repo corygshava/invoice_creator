@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-    <div class="content">
+    <div class="content t0">
         <div class="w3-card callout themeround w3-center">
             <h1 class="hedtxt">Cory's Invoice Generator</h1>
             <p>Welcome to the Invoice Generator, a simple tool to create, manage, and view professional invoices with ease. Perfect for freelancers, small businesses, and entrepreneurs.</p>

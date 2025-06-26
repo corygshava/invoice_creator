@@ -89,6 +89,8 @@ nav .links a.current::before{
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+.content:not(.t0){
     margin: 64px 0 128px 0;
 }
 /* Card Container */
